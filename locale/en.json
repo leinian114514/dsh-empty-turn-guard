@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Empty turn guard",
+    "description": "When the model thinks but produces no text and calls no tools — and the UI still says \"completed\" — this asks it to actually do the work once more, then hands control back to you.",
+    "detail": "docs/DETAIL.md"
+  }
+}

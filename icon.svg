@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Empty turn guard">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#1b2233"/>
+  <!-- 一个空的气泡：里面本该有字，现在什么也没有 -->
+  <path d="M16 18h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H30l-10 7v-7h-4a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4z"
+        fill="none" stroke="#7f8db3" stroke-width="3" stroke-linejoin="round" stroke-dasharray="5 5"/>
+  <!-- 停止记号：表示"这一轮没有产出" -->
+  <circle cx="32" cy="31" r="7.5" fill="#f0a020" opacity="0.9"/>
+  <rect x="28.5" y="27.5" width="7" height="7" rx="1.6" fill="#1b2233"/>
+</svg>

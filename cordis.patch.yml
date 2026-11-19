@@ -1,0 +1,15 @@
+- insert:
+    - id: dsh-empty-turn-guard
+      name: dsh-empty-turn-guard
+      config:
+        # 连续空转超过这个次数就彻底停手（绝不无限催）。
+        # 实际策略更保守：只催**第一次**，第二次还空就把控制权还给用户。
+        maxConsecutive: 3
+        # 思考至少多少字才算"空转"。**默认 0 = 只要有思考就算**。
+        # 🛑 别调高：2026-11-19 真机上一次思考 39 字的空转被门槛 40 放过了；
+        #    而"思考 <门槛 + 无正文 + 无工具"这一格 **DSH 也不兜**
+        #    （它的 EMPTY_RESPONSE 判 content.length === 0，reasoning 算内容）。
+        #    正常回合一定有正文或工具调用，"两样都没有"本身就是异常。
+        minReasoningChars: 0
+        # 日志落盘：ctx.logger 在桌面版不一定看得到，守卫插件必须留下可核查的痕迹。
+        # debugFile: 想留一份可核查的日志就填本地路径；不填则不写文件
